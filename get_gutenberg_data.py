@@ -60,7 +60,7 @@ def download_txts_from_links(txt_links):
         file_name = gutenberg_file_name[:gutenberg_file_name.index('.txt')]
         path = 'data/gutenberg'
 
-        with open(path + '/' + file_name + '.txt', "wb") as f:
+        with open(path + '/' + file_name + '.txt', "wb", "utf-8") as f:
             print(file_name)
             f.write(txt_data)
 
