@@ -63,6 +63,7 @@ if __name__=="__main__":
         # in case the first selected tifu_sentence from the post is not this length, we move on to another post
         # in case we exhausted our candidate_posts list, we opt for another reddit post
         while len(tifu_sentence) > 150:
+            print("candidate_posts length: ", len(candidate_posts))
             if len(candidate_posts) == 0:
                 print("didnt find short enough sentence for keyword: ", random_keyword)
                 # now we need to pick a different keyword
@@ -72,7 +73,6 @@ if __name__=="__main__":
             if len(candidate_posts) == 1:
                 post = candidate_posts[0]
             else:
-                print(len(candidate_posts))
                 post = candidate_posts[randrange(len(candidate_posts))]
 
             candidate_posts.remove(post)
