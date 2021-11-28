@@ -1,3 +1,4 @@
 .idea
 __pycache__
-build_indexes/
+build_indexes/data
+build_indexes/preprocessed
